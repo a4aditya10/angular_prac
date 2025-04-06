@@ -1,0 +1,55 @@
+
+<mat-card class="form-card">
+    <mat-card-content>
+        <mat-card-title class="first-form-heading">Step 1: Basic Information</mat-card-title>
+<form (ngSubmit)="onSubmit()" #userForm="ngForm" class="form-container">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Full Name</mat-label>
+    <input matInput name="fullName" [(ngModel)]="fullName" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" [(ngModel)]="email" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" name="password" [(ngModel)]="password" required />
+  </mat-form-field>
+
+  <label>Gender:</label> 
+  <mat-radio-group [(ngModel)]="gender" name="gender" required>
+    <mat-radio-button value="male">Male</mat-radio-button>
+    <mat-radio-button value="female">Female</mat-radio-button>
+    <mat-radio-button value="other">Other</mat-radio-button>
+  </mat-radio-group>
+
+ 
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Date of Birth</mat-label>
+    <input matInput [matDatepicker]="picker" name="dob" [(ngModel)]="dob" required />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <label>Skills:</label> 
+  <mat-checkbox [(ngModel)]="skills.angular" name="angular">Angular</mat-checkbox>
+  <mat-checkbox [(ngModel)]="skills.react" name="react">React</mat-checkbox>
+  <mat-checkbox [(ngModel)]="skills.node" name="node">Node.js</mat-checkbox>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Country</mat-label>
+    <mat-select [(ngModel)]="country" name="country" required>
+      <mat-option value="india">India</mat-option>
+      <mat-option value="usa">USA</mat-option>
+      <mat-option value="japan">Japan</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+ 
+  <button mat-raised-button color="primary" type="submit">Next</button>
+</form>
+</mat-card-content>
+</mat-card>
