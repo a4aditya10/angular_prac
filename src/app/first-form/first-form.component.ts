@@ -22,7 +22,7 @@ export class FirstFormComponent {
   constructor(private router: Router) {}
 
   onSubmit() {
-    console.log('Form submitted!');
+   
     this.router.navigate(['/step2']);
   }
 }

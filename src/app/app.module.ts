@@ -15,8 +15,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { ReviewFormComponent } from './review-form/review-form.component';
 @NgModule({
-  declarations: [AppComponent, FirstFormComponent, SecondFormComponent],
+  declarations: [AppComponent, FirstFormComponent, SecondFormComponent ,ReviewFormComponent],
   imports: [
     BrowserModule,
     FormsModule,
